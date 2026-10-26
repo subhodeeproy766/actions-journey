@@ -1,0 +1,9 @@
+name: repo variable
+on: push
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: fetch repo variable
+        run: |
+          echo "Deploying to : ${{ vars.DEPLOY_REGION }}"
